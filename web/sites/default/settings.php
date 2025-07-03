@@ -114,7 +114,7 @@ if (file_exists($local_settings)) {
 /**
  * Environment Indicator Default Configuration.
  */
-if ($_ENV['PANTHEON_ENVIRONMENT']) {
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT']) {
   switch ($_ENV['PANTHEON_ENVIRONMENT']) {
   case 'live':
     // Green.
@@ -149,7 +149,7 @@ if ($_ENV['PANTHEON_ENVIRONMENT']) {
   }
 }
 
-if (!$_ENV['PANTHEON_ENVIRONMENT']) {
+if (!isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 // Automatically generated include for settings managed by ddev.
   $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
   if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
