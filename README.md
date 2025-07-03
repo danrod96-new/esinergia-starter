@@ -2,20 +2,13 @@
 
 This is the Drupal Project Starter for the (https://esinergia.co)[ESINERGIA] projects.
 
-This is the Drupal Composer Project with docksal configuration to easily get a
-site started.
-
 Features:
 
 - Configured for Pantheon hosting
 - Unopinionated Modern Drupal Installation
 - Composer Installation
-- Docksal Local Development Configuration
+- DDEV Local Development Configuration
 - CircleCI Deployment and Testing configuration
-
-Please make this README as project specific as possible. Delete the things that
-are not relevant or add new sections as needed.
-
 
 ## Project specific notes
 
@@ -67,8 +60,6 @@ If you don't have DDEV installed:
 2. Ensure you have a compatible Docker provider such as Docker Desktop,
    OrbStack, or Lima:
    [Docker Installation](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/)
-3. **Important:** Turn off Docksal or Lando before starting DDEV to avoid port
-   conflicts.
 
 ### Configure Pantheon Access
 
@@ -113,41 +104,6 @@ the command `ddev`.
 - [ ] Add command: `config-capture`
 - [ ] Add command: `critical`
 - [ ] Add command: `release`
-
-
-## Docksal Commands
-
-The following commands are available with Docksal and should be prefixed with
-the command `fin`.
-
-| Command                 | Description                                                                         |
-|-------------------------|-------------------------------------------------------------------------------------|
-| `config-capture`        | Exports config from environments and downloads them.                                |
-| `critical`              | Run Critical CSS.                                                                   |
-| `cypress`               | Run Cypress inside Docksal. ie. `fin cypress open`.                                 |
-| `cypress-users`         | Adds users Cypress can be used to test. Called from `fin refresh`.                  |
-| `composer`              | Composer wrapper that executes within the CLI container.                            |
-| `init`                  | Init Command that starts the project from scratch.                                  |
-| `init-site`             | Installs and configures Drupal.                                                     |
-| `install-critical-tools`| Installs tools needed for Critical CSS.                                             |
-| `install-cypress`       | Called from `init` to install Cypress tools.                                        |
-| `install-theme-tools`   | Installs tools needed for Critical, Storybook, etc.                                 |
-| `migrate-prep-db`       | Creates a second database to house a migration source.                              |
-| `npm`                   | Run NPM from the theme folder.                                                      |
-| `npx`                   | Run NPX from the theme folder.                                                      |
-| `open`                  | Opens browser to local site URL.                                                    |
-| `rebuild`               | Runs `composer install` and `fin refresh`.                                          |
-| `recipe-apply`          | Apply Drupal contrib Recipes that have been required.                               |
-| `recipe-configure`      | Configures sites for Drupal Recipes. Already run in this repo.                      |
-| `recipe-unpack`         | Unpacks Composer dependencies from a Recipe to the project's composer.json.         |
-| `refresh`               | Will execute a drush sql-dump from the remote server.                               |
-| `release`               | Creates a new release on GitHub and deploys it to Pantheon test environment.        |
-| `share`                 | Opens a proxy server to your local computer using ngrok.io.                         |
-| `solr-create-core`      | Called from `init` to create Solr core.                                             |
-| `testenv`               | Creates a new site similar to `init`, but with a local db for testing/contributing. |
-| `tickle`                | Wakes up the remote migration source environment every 5 minutes.                   |
-| `uuid-rm`               | Helper command for Drupal Recipe builders that removes UUIDs from config files.     |
-
 
 ## Composer Commands
 
