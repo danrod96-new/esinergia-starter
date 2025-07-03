@@ -1,6 +1,6 @@
 # [Drupal Starter](https://example.com/)
 
-This is the Drupal Project Starter for the (https://esinergia.co)[ESINERGIA] projects.
+This is the Drupal Project Starter for the [ESINERGIA](https://esinergia.co) projects.
 
 Features:
 
