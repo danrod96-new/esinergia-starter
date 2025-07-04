@@ -50,16 +50,6 @@ Edit the three files in `/.github/config/`
 
 Run `gh repo-config apply` to apply the configuration to GitHub.
 
-
------
-
-### Start Docksal
-
-* Edit `.docksal/docksal.env`
-  * Update `hostingsite` to the `<repo_name>` used above.  This should also be your Pantheon `<site_name>` used below.
-* Run `fin start`
-
-
 -----
 
 ### Create the site in Pantheon
@@ -163,52 +153,6 @@ things will not work).
 * Make Branch name pattern match your default branch (e.g., main).
 * Select "Require pull request reviews before merging"
 * Click Create button
-
-
-### Configure Docksal
-
-* Clone the new repo to your local.
-* Create a development branch.
-* Make the project specific changes listed below.
-* Docksal
-    * docksal.env
-        * Update `hostingsite` to the machine name of the project in Pantheon
-        * Update `THEME` to the name of the theme folder
-        * `hostingenv` is set to `dev` to start but when you release the
-        project to production it should be changed to `live`
-        ~~* Run `fin install-kdcl-basic` after you have set the~~
-        ~~theme name that you want.~~
-    * settings.php
-        * `.docksal/etc/conf/settings.php` is used for
-        the local settings file for drupal.
-    * vhost-overrides.conf
-        * `.docksal/etc/nginx/vhost-overrides.conf`
-        * Update the proxy url to use the pantheon machine name
-         for the site you just created.
-    * .pa11yci.js
-        * Update the urls you would like to test in the array
-        * Update README's pally section with the links to the correct urls.
-* CircleCI
-    * `config.yml`
-        * Update the `TERMINUS_SITE` variable in line 2
-        to your Pantheon machine name for the project.
-        * Update the `THEME_NAME` variable in line 3
-        to the folder name for your custom theme.
-        * Update paths in JSON lock files in theme
-        * If you would like Slack notifications when builds complete
-        uncomment the slack portion.
-        You will need to create a new CircleCI slack integration
-        for the channel you want to post updates too & update the webhook URL.
-* Run `fin init` to validate your local site.
-* Run `fin drush cex -y`
-* On a development branch, git add, commit and push all local changes.
-* Create a PR in github.
-* CircleCI won't run this time because we haven't set it up yet.
-We need to commit the project-specific CircleCI config.yml first so we can setup
- CircleCI later.
-* Merge PR (now we have our project-specific CircleCI config
-on the main branch so we can reference it from CircleCI).
-Circleci job will still not happen.
 
 
 ### CircleCI project setup
