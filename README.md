@@ -5,7 +5,7 @@ This is the Drupal Project Starter for the [ESINERGIA](https://esinergia.co) pro
 Features:
 
 - Configured for Pantheon hosting
-- Unopinionated Modern Drupal Installation
+- Modern Drupal Installation with basic features
 - Composer Installation
 - DDEV Local Development Configuration
 - CircleCI Deployment and Testing configuration
