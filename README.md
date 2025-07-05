@@ -10,9 +10,9 @@ Features:
 - DDEV Local Development Configuration
 - CircleCI Deployment and Testing configuration
 
-## Project specific notes
+## ESINERGIA specific notes
 
-Are there any projects specific quirks or setup that should be noted?
+- We use DDEV for local development
 
 
 ## Important links

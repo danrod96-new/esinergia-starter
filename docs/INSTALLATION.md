@@ -1,17 +1,9 @@
 # Installation
 
 Instructions on how to install and configure this Drupal project template for
-Pantheon, CircleCI, and local Docksal development.
-
-
------
+Pantheon, CircleCI, and local DDEV development.
 
 ## Installer method
-
-@kanopians - Please use the internal, private repository.
-
-## CLI installation method
-
 
 ### Create a GitHub repository for the project.
 
