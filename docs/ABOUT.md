@@ -1,15 +1,9 @@
 # About kanopi/drupal-starter
 
-[kanopi/drupal-starter](https://www.github.com/kanopi/drupal-starter) is
-opinionless about Drupal.
+[danrod96-new/esinergia-starter](https://github.com/danrod96-new/esinergia-starter) is a starter package for creating ready-to-use Drupal for many industries (Healthcare, E-Commerce, Education, etc) sites to be deployed to Pantheon environments.
 
-What does have Drupal opinions is our new suite of Drupal Recipes called
-[kanopi/saplings](https://www.github.com/kanopi/saplings).
+It uses DDEV for creating local environment.
 
-Explore the Saplings respository to choose your own adventure and apply the
-functionality you need for your Drupal site in minutes.
-
-What kanopi/drupal-starter does have opinions about is scaffolding and testing.
 
 ## Installer Types and Paths
 
