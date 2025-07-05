@@ -68,9 +68,6 @@ Run `gh repo-config apply` to apply the configuration to GitHub.
 * `eu` - European Union
 * `us` - United States
 
-Kanopians: [Link more complete Cacher](https://snippets.cacher.io/snippet/667c30ad329368008618).
-
-
 ### Install Drupal using the minimal install profile
 
 `fin terminus drush <site_name>.dev -- site-install minimal -y --site-name=<drupal_site_name> --account-name=<account_name> --account-mail=<account_mail> --site-mail=<site_mail>`
@@ -86,11 +83,6 @@ Kanopians: [Link more complete Cacher](https://snippets.cacher.io/snippet/667c30
 `fin terminus redis:enable <site_id>`
 
 See [A note about Redis on Pantheon](#a-note-about-redis-on-pantheon) below.
-
-
-### Configure Docksal
-
-@TODO See UI method below until this is documented.
 
 
 ### Configure CircleCI
