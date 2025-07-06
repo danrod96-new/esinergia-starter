@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+## Description: Run terminus Commands
+## Usage: terminus [command]
+## Example: "ddev terminus [command]"
+## OSTypes: linux
