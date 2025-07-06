@@ -11,15 +11,14 @@ By default, in the repositories section of our composer.json, we allow for
 installation from [Packagist](https://packagist.org/),
 [Drupal.org](https://www.drupal.org), and
 [Asset Packagist](https://asset-packagist.org/).  This means you can require not
- only Drupal packages, but packages from
-[Kanopi's Packagist](https://packagist.org/packages/kanopi/) and things like
+ only Drupal packages, but also from custom repositories and things like
 NPM and Bower Assets like
 [Bootstrap](https://asset-packagist.org/package/bower-asset/bootstrap).
 
 In the extras section of the composer.json, we define the `installer-types` and
 `installer-paths` for these packages.
 
-The `installer-types` are dentfied in each package's composer.json file
+The `installer-types` are identfied in each package's composer.json file
 indentifying the type of package they are.
 
 The `installer-paths` define the destination we want to install the different
@@ -95,8 +94,7 @@ These files are kept in /assets and allow us to keep the robots.txt file in the
 default state, but add the customizations we need for our project.
 
 We had some projects where the `settings.php` file was appended too but the
-Kanopi approach now is to commit all changes as needed to `web/sites/default/settings.php`
-as that is a standard practice.
+standard practice now is to commit all changes as needed to `web/sites/default/settings.php`.
 
 ## Testing
 
@@ -124,14 +122,11 @@ The tests are preconfigured in the scripts section of the composer.json.  So we
 can run them locally, pre-commit or pre-push using Lefthook, and in CircleCI.
 Anywhere the site is installed using composer with the dev modules.
 
-At this time, we run 4 pre-build static code tests, `PHPcs`, `PHPstan`, `Rector
-- modules`, and `Rector - themes`.  These tests are now a requirement to pass
-before code can be merged.
+At this time, we run 4 pre-build static code tests, `PHPcs`, `PHPstan`, `Rector - modules`, and `Rector - themes`.  These tests are now a requirement to pass before code can be merged.
 
 ### Post Build tests.
 
-After a site is built in CircleCI, we run post build tests.  These tests are
-installed using our kanopi/ci-tools orb, and configured in the site's
+After a site is built in CircleCI, we run post build tests.  These tests are installed and configured in the site's
 `/.circleci/config.yml` file.
 
 #### Lighthouse
@@ -148,15 +143,10 @@ Lighthouse is configured to run on.
 
 #### Cypress End to End Testing (e2e)
 
-Used to test anything on the website a human can do.  We launch with a simple
+Cypress is used to test anything on the website a human can do.  We launch with a simple
 test that ensures Drupal is installed.  New tests should be added for common
 administration tasks like adding nodes as different roles, and for validation
 steps on high value features.
-
-Be sure to check out [kanopi/shrubs](https://www.github.com/kanopi/shrubs), our
-repository of reusable Cypress support commands for Drupal, and it's
-CHEATSHEET.md for helpful test snippets you can copy and paste into your own
-test.
 
 #### Structured Data Testing Tool (SDTT)
 
