@@ -1,4 +1,4 @@
-# About kanopi/drupal-starter
+# About esinergia/drupal-starter
 
 [danrod96-new/esinergia-starter](https://github.com/danrod96-new/esinergia-starter) is a starter package for creating ready-to-use Drupal for many industries (Healthcare, E-Commerce, Education, etc) sites to be deployed to Pantheon environments.
 
