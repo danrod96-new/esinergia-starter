@@ -25,7 +25,7 @@ Install the [Repo Config GH CLI extension](https://github.com/twelvelabs/gh-repo
 
 `cd ~/Projects` (Or where ever you keep your sites.)
 
-`gh repo create <organization>/<repo_name> --template kanopi/drupal-starter --private --team <team_name> --clone`
+`gh repo create <organization>/<repo_name> --template danrod96-new/esinergia-starter --private --team <team_name> --clone`
 
 `cd <repo_name>`
 
@@ -46,7 +46,7 @@ Run `gh repo-config apply` to apply the configuration to GitHub.
 
 ### Create the site in Pantheon
 
-`fin terminus site:create --org=<org_id> —-region=<region> -- <site_name> <label> <upstream_id>`
+`ddev terminus site:create --org=<org_id> —-region=<region> -- <site_name> <label> <upstream_id>`
 
 * `site_name` - Machine name of the project
 * `label` - Friendly project name
@@ -62,7 +62,7 @@ Run `gh repo-config apply` to apply the configuration to GitHub.
 
 ### Install Drupal using the minimal install profile
 
-`fin terminus drush <site_name>.dev -- site-install minimal -y --site-name=<drupal_site_name> --account-name=<account_name> --account-mail=<account_mail> --site-mail=<site_mail>`
+`ddev terminus drush <site_name>.dev -- site-install minimal -y --site-name=<drupal_site_name> --account-name=<account_name> --account-mail=<account_mail> --site-mail=<site_mail>`
 
 * `drupal_site_name` - Friendly name of the site.
 * `account_name` - User 1's machine name.
@@ -72,7 +72,7 @@ Run `gh repo-config apply` to apply the configuration to GitHub.
 
 ### Add Redis to the Pantheon site
 
-`fin terminus redis:enable <site_id>`
+`ddev terminus redis:enable <site_id>`
 
 See [A note about Redis on Pantheon](#a-note-about-redis-on-pantheon) below.
 
