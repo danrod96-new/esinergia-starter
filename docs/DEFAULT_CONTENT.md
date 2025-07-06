@@ -43,4 +43,4 @@ dcer gets all the dependencies of the entity you are exporting.
 
 4. Disable the module when done.
 
-fin drush pmu -y default_content
+ddev drush pmu -y default_content
