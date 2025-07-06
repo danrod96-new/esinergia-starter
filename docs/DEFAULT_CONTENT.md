@@ -7,7 +7,7 @@ for a recipe.
 
 The module is required in the dev section.  It is not required in production.
 
-fin drush en -y default_content
+ddev drush en -y default_content
 
 ## Exporting content
 
