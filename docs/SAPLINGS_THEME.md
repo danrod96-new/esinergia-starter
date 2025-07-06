@@ -1,10 +1,7 @@
-# Saplings Child Theme
 
-@TODO for Docksal configuration documentation.
+# Theme Commands
 
-## Theme Commands
-
-These commands should be prefaced with `fin npm`
+These commands should be prefaced with `ddev npm`
 
 Command | Description
 --------|------------

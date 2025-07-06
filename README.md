@@ -17,8 +17,7 @@ Features:
 
 ## Important links
 
-Please put links to the important places here.
-Imagine you know nothing about the project.
+Important links for the Drupal Starter:
 
 * [Local URL]()
 * [Project URL]()
