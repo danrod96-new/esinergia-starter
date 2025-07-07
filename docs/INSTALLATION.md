@@ -60,22 +60,35 @@ Where
 
 * `site_name` - Machine name of the project
 * `label` - Friendly project name
-* `upstream_id` - Currently *Drupal 10 Start State* - `7f9fd7d4-77ec-4e6b-a73f-d32b93a1c6b1`
+* `upstream_id` - Currently *Drupal 11 Start State* - `e8efc734-962c-44ef-ae30-9c6b1330a135`
 
 You can run `terminus upstream:list` to see all:
 
 ![Contents of terminus upstream:list](https://github.com/danrod96-new/esinergia-starter/blob/main/docs/assets/esinegia-starter1.png)
 
 * `org_id` - The UUID of your Pantheon organization.
-* Run `terminus org:list` to see all.
+
+You can run `terminus org:list` to see all:
+
+![Contents of terminus upstream:list](https://github.com/danrod96-new/esinergia-starter/blob/main/docs/assets/esinegia-starter1.png)
 
 Example:
 
 `terminus site:create --org=affb90c8-d5ec-4e20-555-e6d39892cff2 -- new-test-esinergia-site "New Test ESINERGIA Site" e8efc734-962c-44ef-ae30-9c6b1330a13`
 
+You will an output like this:
+
+```
+$ terminus site:create --org=affb90c8-d5ec-4e20-94ab-e6d39892cff2 -- new-test-esinergia-site "New Test ESINERGIA Site" e8efc734-962c-44ef-ae30-9c6b1330a135
+ [notice] Creating a new site...
+ [notice] Deploying CMS...
+ [notice] Waiting for site availability...
+ [notice] new-test-esinergia-site site has been created successfully and is available for use.
+```
+
 ### Install Drupal using the minimal install profile
 
-`ddev terminus drush <site_name>.dev -- site-install minimal -y --site-name=<drupal_site_name> --account-name=<account_name> --account-mail=<account_mail> --site-mail=<site_mail>`
+`terminus drush <site_name>.dev -- site-install minimal -y --site-name=<drupal_site_name> --account-name=<account_name> --account-mail=<account_mail> --site-mail=<site_mail>`
 
 * `drupal_site_name` - Friendly name of the site.
 * `account_name` - User 1's machine name.
