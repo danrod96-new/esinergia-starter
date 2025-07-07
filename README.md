@@ -62,6 +62,8 @@ If you don't have DDEV installed:
 
 ### Configure Pantheon Access
 
+Install [Terminus](https://docs.pantheon.io/terminus), you'll use it to send commands to the Pantheon environment.
+
 Generate a [Pantheon Machine Token](https://pantheon.io/docs/machine-tokens/)
 and add it to your global DDEV config at `~/.ddev/global_config.yaml`:
 
