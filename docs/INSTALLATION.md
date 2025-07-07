@@ -76,7 +76,7 @@ Example:
 
 `terminus site:create --org=affb90c8-d5ec-4e20-555-e6d39892cff2 -- new-test-esinergia-site "New Test ESINERGIA Site" e8efc734-962c-44ef-ae30-9c6b1330a13`
 
-You will an output like this:
+You see will an output like this:
 
 ```
 $ terminus site:create --org=affb90c8-d5ec-4e20-94ab-e6d39892cff2 -- new-test-esinergia-site "New Test ESINERGIA Site" e8efc734-962c-44ef-ae30-9c6b1330a135
@@ -95,10 +95,49 @@ $ terminus site:create --org=affb90c8-d5ec-4e20-94ab-e6d39892cff2 -- new-test-es
 * `account_mail` - User 1's email.
 * `site_mail` - For Drupal system mailings.
 
+Example:
+
+`terminus drush 3393a6e8-c105-407a-a137-9b01c6ac38a6.dev -- site-install minimal -y --site-name="New Test ESINERGIA Site" --account-name=admin_esinergia --account-mail=danrod@esinergia.co`
+
+You will an output like this:
+
+```
+$ terminus drush 3393a6e8-c105-407a-a137-9b01c6ac38a6.dev -- site-install minimal -y --site-name="New Test ESINERGIA Site" --account-name=admin_esinergia --account-mail=danrod@esinergia.co
+ You are about to:
+ * DROP all tables in your 'pantheon' database.
+
+ // Do you want to continue?: yes.                                              
+
+ [notice] Starting Drupal installation. This takes a while.
+ [notice] Performed install task: install_select_language
+ [notice] Performed install task: install_select_profile
+ [notice] Performed install task: install_load_profile
+ [notice] Performed install task: install_verify_requirements
+ [notice] Performed install task: install_verify_database_ready
+ [notice] Performed install task: install_base_system
+ [notice] Performed install task: install_bootstrap_full
+ [notice] Performed install task: install_profile_modules
+ [notice] Performed install task: install_profile_themes
+ [notice] Performed install task: install_install_profile
+ [notice] Performed install task: install_configure_form
+ [notice] Performed install task: install_finished
+ [success] Installation complete.  User name: admin_esinergia  User password: D2pWbeqAxh
+ [notice] Command: new-test-esinergia-site.dev -- drush site-install minimal [Exit: 0] (Attempt 1/1)
+```
+
+This will give you an username and a password to connect to the new pantheon instance
 
 ### Add Redis to the Pantheon site
 
-`ddev terminus redis:enable <site_id>`
+`terminus redis:enable <site_id>`
+
+Example:
+
+```
+$ terminus redis:enable 3393a6e8-c105-407a-a137-9b01c6ac38a6
+ [notice] Enabled cacheserver for site
+$
+```
 
 See [A note about Redis on Pantheon](#a-note-about-redis-on-pantheon) below.
 
