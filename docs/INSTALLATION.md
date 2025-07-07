@@ -54,14 +54,38 @@ Dont forget to run:
 
 Then run
 
-`ddev terminus site:create --org=<org_id> -- <site_name> <label> <upstream_id>`
+`terminus site:create --org=<org_id> -- <site_name> <label> <upstream_id>`
+
+Where
 
 * `site_name` - Machine name of the project
 * `label` - Friendly project name
 * `upstream_id` - Currently *Drupal 10 Start State* - `7f9fd7d4-77ec-4e6b-a73f-d32b93a1c6b1`
-* Run `ddev terminus upstream:list` to see all.
+
+You can run `terminus upstream:list` to see all:
+
+ -------------------------------------- -------------------------------------- -------------------------------------- ------ ----------- -------------- 
+  ID                                     Name                                   Machine Name                           Type   Framework   Organization  
+ -------------------------------------- -------------------------------------- -------------------------------------- ------ ----------- -------------- 
+  19a917a4-c56e-44d6-98a1-49e7f779e678   Decoupled Drupal 10 Composer Managed   decoupled-drupal-10-composer-managed   core   drupal8                   
+  c9f5e5c0-248f-4205-b63a-d2729572dd1f   Decoupled WordPress Composer Managed   decoupled-wordpress-composer-managed   core   wordpress                 
+  bde48795-b16d-443f-af01-8b1790caa1af   Drupal (Composer Managed)              drupal-composer-managed                core   drupal8                   
+  7f9fd7d4-77ec-4e6b-a73f-d32b93a1c6b1   Drupal 10 Start State                  drupal-10-composer-managed             core   drupal8                   
+  e8efc734-962c-44ef-ae30-9c6b1330a135   Drupal 11 Start State                  drupal-11-composer-managed             core   drupal8                   
+  21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                               drupal7                                core   drupal                    
+  8a129104-9d37-4082-aaf8-e6f31154644e   Drupal 8                               drupal8                                core   drupal8                   
+  462d08e2-3322-48a1-b150-f12a075eaabe   Drupal CMS                             drupal-cms-composer-managed            core   drupal8                   
+  e8fe8550-1ab9-4964-8838-2b9abdccf4bf   WordPress                              wordpress                              core   wordpress                 
+  90a683cd-4e03-4832-9b49-be97ab2a0be4   WordPress (Composer Managed)           wordpress-composer-managed             core   wordpress                 
+ -------------------------------------- -------------------------------------- -------------------------------------- ------ ----------- -------------- 
+
+
 * `org_id` - The UUID of your Pantheon organization.
-* Run `ddev terminus org:list` to see all.
+* Run `terminus org:list` to see all.
+
+Example:
+
+`terminus site:create --org=affb90c8-d5ec-4e20-555-e6d39892cff2 -- new-test-esinergia-site "New Test ESINERGIA Site" e8efc734-962c-44ef-ae30-9c6b1330a13`
 
 ### Install Drupal using the minimal install profile
 
