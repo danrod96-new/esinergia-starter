@@ -46,7 +46,7 @@ use the Default Content module to create default content for a recipe.
 ## Theme Commands and Setup Documentation
 - [Saplings Child](docs/SAPLINGS_THEME.md) - Current theme based on
 ui_suite_bootstrap
-- [Emulsify](docs/EMULSIFY.md) basic theme was built from
+- [Emulsify](docs/EMULSIFY.md) - Basic theme was built from
 Emulsify. 
 
 ## Local Development with DDEV
@@ -77,7 +77,6 @@ the command `ddev`.
 
 | Command Name             | Container | Short Description                                     | Usage Syntax                        |
 |--------------------------|-----------|-------------------------------------------------------|-------------------------------------|
-| `terminus`               | host      | Run terminus commands to the target pantheon site     | `ddev terminus [command]`            |
 | `cypress`                | host      | Run Cypress commands with optional environment target | `ddev cypress [command]`            |
 | `cypress-users`          | host      | Create default admin user for Cypress testing         | `ddev cypress-users`                |
 | `init`                   | host      | Initialize local development environment              | `ddev init`                         |

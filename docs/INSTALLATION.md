@@ -1,16 +1,15 @@
 # Installation
 
 Instructions on how to install and configure this Drupal project template for
-Pantheon, CircleCI, and local DDEV development.
+Pantheon, CircleCI, and the local DDEV development.
 
 ## Installer method
 
 ### Create a GitHub repository for the project.
 
-Install [GitHub CLI](https://cli.github.com/) if you don't have it. `brew install gh`
+Install [GitHub CLI](https://cli.github.com/) if you don't have it. Please check out the site to install the CLI on many Operating Systems.
 
 Install the [Repo Config GH CLI extension](https://github.com/twelvelabs/gh-repo-config) `gh extension install twelvelabs/gh-repo-config`
-
 
 #### Create a GitHub team (Optional)
 
@@ -27,7 +26,10 @@ Install the [Repo Config GH CLI extension](https://github.com/twelvelabs/gh-repo
 
 `gh repo create <organization>/<repo_name> --template danrod96-new/esinergia-starter --private --team <team_name> --clone`
 
-`cd <repo_name>`
+Example
+`gh repo create danrod96-new/new_test_esinergia_site --template danrod96-new/esinergia-starter --public --clone`
+
+`cd new_test_esinergia_site`
 
 NOTE: Use `--public` instead of `--private` for a public repository.
 
@@ -46,19 +48,20 @@ Run `gh repo-config apply` to apply the configuration to GitHub.
 
 ### Create the site in Pantheon
 
-`ddev terminus site:create --org=<org_id> —-region=<region> -- <site_name> <label> <upstream_id>`
+Dont forget to run:
+
+`terminus auth:login --email=yourname@youremail.ca`
+
+Then run
+
+`ddev terminus site:create --org=<org_id> -- <site_name> <label> <upstream_id>`
 
 * `site_name` - Machine name of the project
 * `label` - Friendly project name
 * `upstream_id` - Currently *Drupal 10 Start State* - `7f9fd7d4-77ec-4e6b-a73f-d32b93a1c6b1`
-* Run `fin terminus upstream:list` to see all.
+* Run `ddev terminus upstream:list` to see all.
 * `org_id` - The UUID of your Pantheon organization.
-* Run `fin terminus org:list` to see all.
-* `region` Codes for which region to create the site.
-* `au` - Australia
-* `ca` - Canada
-* `eu` - European Union
-* `us` - United States
+* Run `ddev terminus org:list` to see all.
 
 ### Install Drupal using the minimal install profile
 
